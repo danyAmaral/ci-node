@@ -13,7 +13,7 @@ jobs:
       - name: install dependecies
       - run: npm install express
       - name: Run test
-        uses: npm test
+      - run: npm test
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
