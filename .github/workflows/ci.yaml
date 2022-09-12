@@ -13,7 +13,7 @@ jobs:
       - uses: install dependecies
       - run: npm install
       - uses: run tests
-      - run: npm run test
+      - run: npm run test -coverprofile=coverage.out
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
