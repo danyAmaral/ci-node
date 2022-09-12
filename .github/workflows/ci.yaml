@@ -11,10 +11,10 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: "14.x"
-      - uses: install dependecies
-      - run: npm install
-      - uses: run tests
-      - run: npm run test -coverprofile=coverage.out
+      - name: install dependecies
+        run: npm install
+      - name: run tests
+        run: npm run test -coverprofile=coverage.out
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
